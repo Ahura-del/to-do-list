@@ -16,11 +16,13 @@ function addTasks() {
     } else {
 
 
-        let pTag, taskSpan, task, delTask;
+        let pTag, taskSpan, task, delTask, delicon;
 
         pTag = document.createElement("p");
 
         taskSpan = document.createElement("span");
+
+        taskSpan.style.cursor = "pointer";
 
         task = document.createTextNode(input.value);
 
@@ -30,9 +32,13 @@ function addTasks() {
 
         delTask = document.createElement('span');
 
-        delTask.innerHTML = "&#9747;"
+        delicon = document.createTextNode("X");
+
+        delTask.appendChild(delicon);
 
         delTask.style.cursor = "pointer";
+
+        delTask.style.color = "red";
 
         pTag.appendChild(delTask);
 
