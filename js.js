@@ -11,10 +11,10 @@ tasks = container.querySelector(".tasks");
 btn.addEventListener("click", addTasks);
 
 function addTasks() {
-    if (input.value == "") {
+    if (input.value === "") {
         alert("Please Check The Input Area");
-
     } else {
+
 
         let pTag, taskSpan, task, delTask;
 
@@ -57,5 +57,6 @@ function addTasks() {
             tasks.removeChild(pTag);
         };
 
+        document.getElementById("task-input").value = "";
     }
 }
